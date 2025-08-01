@@ -2,7 +2,7 @@ const express = require("express");
 const cors = require("cors");
 
 const app = express();
-const PORT = 5000;
+const PORT = process.env.PORT || 5000; // Use dynamic port from Render
 
 app.use(cors());
 
@@ -24,5 +24,5 @@ app.get("/api/leaderboard", (req, res) => {
 });
 
 app.listen(PORT, () => {
-  console.log(`Backend server running at http://localhost:${PORT}`);
+  console.log(`Server is running on port ${PORT}`);
 });

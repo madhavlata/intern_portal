@@ -5,11 +5,11 @@ function Dashboard() {
   const [leaderboard, setLeaderboard] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/intern")
+    fetch("https://intern-portal-kz4p.onrender.com/api/intern")
       .then((res) => res.json())
       .then((data) => setIntern(data));
 
-    fetch("http://localhost:5000/api/leaderboard")
+    fetch("https://intern-portal-kz4p.onrender.comapi/leaderboard")
       .then((res) => res.json())
       .then((data) => setLeaderboard(data));
   }, []);
