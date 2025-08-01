@@ -9,7 +9,7 @@ function Dashboard() {
       .then((res) => res.json())
       .then((data) => setIntern(data));
 
-    fetch("https://intern-portal-kz4p.onrender.comapi/leaderboard")
+    fetch("https://intern-portal-kz4p.onrender.com/api/leaderboard")
       .then((res) => res.json())
       .then((data) => setLeaderboard(data));
   }, []);
